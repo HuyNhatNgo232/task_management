@@ -55,15 +55,18 @@ class TaskItem extends Component {
 const mapStateToProps = (state) => {
   return {
 
-  }
-}
+  };
+};
 
 const mapDispatchToProps = (dispatch, props) =>{
   return {
     onUpdateStatus: (id) => {
       dispatch(actions.updateStatus(id))
     },
-  }
-}
+    onDeleteTask: (id) => {
+      dispatch(actions.deleteTask(id))
+    }
+  };
+};
 
 export default connect(mapStateToProps, mapDispatchToProps) (TaskItem);

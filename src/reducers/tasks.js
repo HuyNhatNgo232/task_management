@@ -46,6 +46,12 @@ var myReducer = (state = initialState, action) => {
             }            
             localStorage.setItem('tasks', JSON.stringify(state));
             return [...state]
+        case types.DELETE_TASK:
+            var id = action.id;
+            var deleteIndex = findIndex(state, id);
+            state.splice(deleteIndex, 1);
+            localStorage.setItem('task', JSON.stringify(state));
+            return [...state]
         default: 
             return state;
     }
