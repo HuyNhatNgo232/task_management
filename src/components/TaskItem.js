@@ -9,8 +9,8 @@ class TaskItem extends Component {
     this.props.onUpdateStatus(this.props.task.id)
   }
 
-  onDelete = () => {
-    this.props.onDelete(this.props.task.id)
+  onDelete = () => {  
+    this.props.onDeleteTask(this.props.task.id)
   }
 
   onEdit = () => {
